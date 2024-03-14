@@ -1,0 +1,33 @@
+@import "../../../assets/styles/color.scss";
+
+.boolean-input {
+    width: 40px;
+    height: 20px;
+    border-radius: 99px;
+    position: relative;
+    transition: 0.4s all ease-out;
+    
+    .circle-indicator {
+        border-radius: 99px;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 4px;
+        transition: 0.4s all ease-out;
+    }
+}
+.boolean-input.true {
+    background-color: $blue;
+    .circle-indicator {
+        left: 24px;
+        background-color: $almost-white;
+    }
+}
+
+.boolean-input.false {
+    background-color: $gray-dark;
+    .circle-indicator {
+        left: 4px;
+        background-color: $blue;
+    }
+}

@@ -1,0 +1,12 @@
+User-agent: *
+Disallow:
+
+User-agent: Googlebot
+Disallow: /account/
+Disallow: /fan/
+Disallow: /fans/
+Disallow: /notifications/
+Disallow: /profile/
+Disallow: /portfolio/
+Disallow: /redirect/
+Disallow: /stocks/

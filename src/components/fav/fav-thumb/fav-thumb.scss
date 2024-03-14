@@ -1,0 +1,23 @@
+@import "../../../assets/styles/color.scss";
+
+.fav-thumb {
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  background-color: $gray-dark;
+  border-radius: 9999px;
+  overflow: hidden;
+  display: flex;
+
+  img {
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    object-fit: cover;
+    margin: auto;
+  }
+
+  img.default-img {
+    width: calc(var(--thumb-size) / 2);
+    height: calc(var(--thumb-size) / 2);
+    object-fit: contain;
+  }
+}

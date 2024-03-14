@@ -1,0 +1,89 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.equity-chart {
+
+  padding-bottom: 80px;
+
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loader-container,
+  .canvas-container {
+    max-width: 100% !important;
+    display: flex;
+    height: 296px !important;
+
+    @include mobile-only {
+      height: 237px !important;
+    }
+
+    margin-bottom: 42px;
+  }
+
+  .price-row {
+    position: relative;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 32px;
+
+    @include mobile-only {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .eth-price {
+      color: $almost-white;
+      margin-right: 12px;
+    }
+
+    .usd-price {
+      color: $gray;
+    }
+  }
+
+  .delta-row {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 38px;
+
+    .eth-delta {
+      margin-right: 8px;
+    }
+
+    .percentage-delta {
+      color: $gray
+    }
+
+    .percentage-timeframe {
+      color: $gray;
+      margin-left: 8px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-top: 12px;
+    }
+  }
+}
+
+#equity-chart-tooltip {
+  background-color: $gray-darker;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 4px 10px;
+  text-align: center;
+  transform: translateY(-70%);
+  box-sizing: border-box;
+  text-align: center;
+
+  .date {
+    color: $almost-white;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+}

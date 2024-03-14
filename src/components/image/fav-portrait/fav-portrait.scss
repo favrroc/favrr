@@ -1,0 +1,34 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.fav-portrait {
+  overflow: hidden;
+  box-sizing: border-box;
+  
+  border: 16px solid #242731;
+  border-radius: 16px;
+  box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.2);
+
+  position: relative;
+
+  .fav-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .fav-image.default-img {
+    padding: 30%;
+    box-sizing: border-box;
+    object-fit: contain;
+    background-color: $gray-dark;
+}
+
+  .like-button {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    // @include responsive(right, null, 16px, 26px);
+    // @include responsive(top, null, 16px, 26px);
+  }
+}

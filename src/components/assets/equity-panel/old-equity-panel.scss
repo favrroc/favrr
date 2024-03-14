@@ -1,0 +1,137 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+@mixin old-panel-layout {
+  background-color: $gray-darker;
+  // border: 1px solid $gray-dark;
+  border-radius: 16px;
+  padding: 32px;
+  @media (max-width: 1024px) {
+    padding: 24px;
+  }
+}
+
+.old-equity-panel {
+  display: flex;
+
+  @include old-panel-layout;
+  .old-equity-section {
+    // padding: 20px 0px;
+    flex-basis: 0;
+    min-width: 0;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    // display: flex;
+    // column-gap: 12px;
+    // flex-wrap: wrap;
+  }
+
+  .old-title-section {
+    font-size: 14px;
+    color: $almost-white;
+    margin-bottom: 6px;
+    width: 100%;
+  }
+
+  .old-panel-separator {
+    background-color: $gray-darkest;
+    width: 1px;
+    margin: 0px 48px;
+    @media (max-width: 1200px) {
+      margin: 0px 24px;
+    }
+  }
+
+  // .main-values-container {
+    // display: flex;
+    // column-gap: 12px;
+    // flex-wrap: wrap;
+    
+    // @media ( max-width: 1200px) and (min-width: 1024px) {
+    //   flex-direction: column;
+    // }
+  // }
+
+  .old-main-value {
+    font-weight: 600;
+    font-size: 24px;
+    color: $almost-white;
+    margin-right: 12px;
+    display: block;
+  }
+
+  .old-usd-value, .old-secondary-value {
+    color: #777E90;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .old-field-name {
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+
+  .old-field-value {
+    font-size: 14px;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    column-gap: 6px;
+  }
+
+  .old-eth-value {
+    font-weight: 500;
+    color: $almost-white;
+    white-space: nowrap;
+  }
+
+  .old-field-row {
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+    color: #777E91;
+  }
+
+  .old-bottom-section {
+    margin-top: 32px;
+    display: flex;
+    flex-direction:  column;
+    gap: 18px;
+  }
+
+  .old-white {
+    color: $almost-white;
+    font-weight: 500;
+  }
+
+  @media (max-width: 660px) {
+    //Gap between equity-section in responsive layout
+    // column-gap: 20px;
+
+    dispĺay: flex;
+    flex-direction: column;
+
+    @include mobile-only {
+      column-gap: 12px;
+    }
+
+    .old-panel-separator {
+      width: 100%;
+      height: 1px;
+      margin: 24px 0px;
+    }
+
+    // .equity-section {
+    //   @include panel-layout;
+    // }
+  }
+  // @media (min-width: 1025px) {
+  //   @include panel-layout;
+  // }
+}

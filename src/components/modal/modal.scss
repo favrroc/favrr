@@ -1,0 +1,13 @@
+@import "../../assets/styles/color.scss";
+
+.modal-container {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  z-index: 200;
+  background-color: #{$gray-dark}#{E6};
+  display: flex;
+  overflow: auto;
+}

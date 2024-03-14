@@ -1,0 +1,147 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.empty-notifications-form {
+  // @include responsive(padding,16px 22px,0px, 0px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 360px;
+  min-width: 332px;
+  justify-content: center;
+  padding: 28px 32px;
+  // background-color: $gray-darkest;
+  
+  @include mobile-only {
+    min-width: unset;
+    padding: 16px 22px;
+  }
+
+  .notification-email-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    color: $almost-white;
+    margin-bottom: 24px;
+  }
+
+  .action-container {
+    position: relative;
+    border: 2px solid $gray-dark;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 280px;
+  }
+  .subscription-button {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: $almost-white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 100%;
+  }
+
+  .back-button {
+    color: $almost-white;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid $gray-dark;
+    box-sizing: border-box;
+    border-radius: 90px;
+    padding: 10px 14px;
+    margin-right: auto;
+    display: none;
+
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  .back-button:hover {
+    border-color: $almost-white;
+  }
+}
+
+.empty-notifications-form.subscription {
+  .action-container {
+    padding: 6px;
+    padding-left: 14px;
+  }
+  .action-container.error {
+    border-color: $pink;
+  }
+  .back-button {
+    display: unset;
+  }
+  .email-form {
+    width: 100%;
+    display: flex;
+    input {
+      background-color: transparent;
+      flex-grow: 1;
+      border: none;
+      outline: none;
+
+      font-weight: 500;
+      font-size: 14px;
+      color: $almost-white;
+    }
+    button {
+      border-radius: 20px;
+      background-color: $blue;
+      width: 32px;
+      height: 32px;
+    }
+    @include responsive-hover("button") {
+      background-color: $link-hover;
+    }
+    img {
+      filter: brightness(2);
+    }
+  }
+
+  .subscription-description {
+    font-family: poppins;
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray-lighter;
+    max-width: 273px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .input-error-label {
+    font-family: poppins;
+    margin-top: 8px;
+    font-size: 12px;
+    color: $pink;
+    position: absolute;
+    bottom: -8px;
+    transform: translate(-50%, 100%);
+    left: 50%;
+  }
+}
+
+.empty-notifications-form.subscription-complete {
+  .notification-email-icon {
+    width: 154px;
+    height: 154px;
+    object-fit: cover;
+
+  } 
+}
+
+.empty-notifications-form.notifications {
+  .action-container:hover {
+    border-color: $almost-white;
+  } 
+}

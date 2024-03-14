@@ -1,0 +1,84 @@
+@import "../../../assets/styles/color.scss";
+
+.funds-added-modal {
+  @media (max-width: 576px) {
+    max-width: 320px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.content-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media (max-width: 576px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+
+  @media (max-width: 576px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.amount-image-container {
+  position: relative;
+  display: flex;
+  font-family: "DM Sans";
+  z-index: 1;
+
+  .amount-container {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .fractional-part {
+    color: $gray;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 1px;
+    color: #FCFCFDA3;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+
+  .check-mark-container {
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    bottom: 0px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, 50%);
+
+    .check-mark {
+      margin-top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.done-btn {
+  margin-top: 32px;
+  margin-bottom: 10px;
+  width: 100%;
+}

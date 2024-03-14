@@ -1,0 +1,49 @@
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/responsive.scss";
+
+.coming-soon-panel {
+    background-color: #1F2128;
+    @include responsive(padding, 68px #{$screen-padding}, 68px #{$screen-padding}, 260px #{$screen-padding});
+    .panel-content {
+        @include desktop-only {
+            width: 468px;
+        }
+        max-width: 100%;
+    }
+    
+    .coming-soon-label {
+        color: $light-blue;
+        font-weight: 500;
+        font-size: 14px;
+
+        @include responsive (margin-bottom, 24px, 16px, 16px);
+    }
+
+    .panel-title {
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: bold;
+        @include responsive (font-size, 64px, 48px, 40px, 1024px, 400px);
+        @include responsive (line-height, 64px, 56px, 48px, 1024px, 400px);
+        color: $almost-white;
+        margin-bottom: 48px;
+    }
+
+    .panel-content {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    @media (max-width: 360px) {
+        .panel-title {
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+        .panel-content {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+}

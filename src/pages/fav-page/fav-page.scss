@@ -1,0 +1,213 @@
+@import "../../assets/styles/responsive.scss";
+@import "../../assets/styles/scroll.scss";
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/sizes.scss";
+
+$top-module-layout-threshold: 1024px;
+.fav-page {
+  $components-vertical-spacing: var(--modules-vertical-spacing);
+
+  .base-page-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: $max-content-width;
+    width: calc(100% - 2 * #{$screen-padding});
+    @media (max-width: 1024px) {
+      .fav-portrait {
+        height: 768px;
+      }
+    }
+    @media (max-width: 659px) {
+      // width: 375px;
+      max-width: calc(100% - $screen-padding);
+      .fav-portrait {
+        height: 478px;
+      }
+    }
+
+    margin: auto;
+  }
+  .top-module {
+    display: grid;
+    grid-template-columns: calc(100% - max(32px, 8%) - 384px) 384px;
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: max(32px, 8%);
+    .left-col {
+      padding-top: 96px;
+    }
+    .right-col {
+      margin-top: 96px;
+      .floating-element {
+        padding-top: 48px;
+        background: #1f2128;
+      }
+      .buy-sell-panel {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .fav-identifier {
+    margin: 0px;
+    grid-column: 2 / 3;
+  }
+
+  .buy-sell-panel {
+    margin-top: 32px;
+    grid-column: 2 / 3;
+    max-height: 300px;
+    transition: all 0.7s ease-out;
+  }
+
+  .about-section {
+    @media (min-width: $top-module-layout-threshold + 1px) {
+      max-width: 640px;
+    }
+  }
+
+  .about-section,
+  .top-module {
+    @include responsive(margin-bottom, 70px, 90px, 190px);
+  }
+
+  .fav-name {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: $almost-white;
+    margin-right: 16px;
+  }
+
+  .fav-share-name {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+    color: $gray;
+    vertical-align: text-top;
+  }
+
+  .section-title,
+  .fav-price-volume-panel {
+    @include responsive(margin-top, 128px, 160px, 192px);
+  }
+  .section-title {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 40px;
+    color: $almost-white;
+    // margin-top: 96px;
+    margin-bottom: 64px;
+    @media (max-width: 660px) {
+      margin-bottom: 48px;
+      font-size: 32px;
+    }
+    text-transform: capitalize;
+  }
+
+  .about-title {
+    @include responsive(margin-bottom, 32px, 32px, 42px);
+  }
+
+  @include hideScrollBar(".tags-container");
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+    @include mobile-only {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+
+    .tag-button {
+      margin-right: 8px;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+  }
+
+  .fav-portrait {
+    width: 100%;
+    // min-width: 311px;
+    // max-width: calc(100vw - 2 * #{$screen-padding} - 32px - 305px);
+    // @include responsive(width, 311px, 496px, 640px, $tablet-desktop-threshold, 860px);
+    height: 65vw;
+    max-height: 768px;
+    min-height: 478px;
+    // @include responsive(height, 478px, null, 768px, $tablet-desktop-threshold, 860px);
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+  }
+
+  @media (max-width: $top-module-layout-threshold) {
+    .top-module {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fav-portrait {
+      margin: 32px auto;
+    }
+  }
+
+  .pinned-panel {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 20;
+  }
+
+  .pinned-panel.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media (min-width: $top-module-layout-threshold + 1px) {
+    // .buy-sell-panel:not(.row) {
+    //   position: sticky;
+    //   top: 150px;
+    // }
+  }
+
+  .buy-sell-panel.panel.hidden {
+    max-height: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .bottom-content {
+    min-width: 0px;
+    @media (max-width: 1024px) {
+      margin-top: 80px;
+    }
+    grid-column: 1 / 2;
+  }
+
+  @include hideScrollBar(".similar-favs");
+  .similar-favs {
+    @media (min-width: $top-module-layout-threshold + 1px) {
+      max-width: 640px;
+    }
+    margin-right: auto;
+  }
+
+  hr {
+    margin: 56px 0px;
+    background-color: $gray-dark;
+    height: 1px;
+    border: none;
+  }
+
+  .fav-price-volume-panel {
+    @media (min-width: $top-module-layout-threshold + 1px) {
+      max-width: 640px;
+    }
+  }
+
+  .old-equity-panel {
+    margin-top: 56px;
+  }
+}

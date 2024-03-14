@@ -1,0 +1,20 @@
+@import "../../../../assets/styles/color.scss";
+@import "../../../../assets/styles/responsive.scss";
+@import "../../../../assets/styles/scroll.scss";
+
+@include hideScrollBar(".modal-content");
+.modal-content {
+  background-color: #1F2128;
+  border-radius: 20px;
+  box-shadow: 0px 16px 64px -48px rgba(31, 47, 70, 0.5);
+  margin: auto;
+  @include responsive(padding, 16px, null, 32px);
+  @include responsive(padding-top, 32px, null, null);
+  @include responsive(padding-bottom, 32px, null, null);
+  box-sizing: border-box;
+  // padding-bottom: 32px !important;
+  width: 100%;
+  @include responsive(max-width, 343px, null, 448px);
+  max-height: 100%;
+  overflow: auto;
+}

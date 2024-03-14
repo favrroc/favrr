@@ -1,0 +1,158 @@
+@import "../../../assets/styles/color.scss";
+
+.my-favs-row:hover {
+  background-color: $gray-darkest;
+  border-radius: 16px;
+  color: $almost-white !important
+
+}
+.my-favs-row {
+  display: flex;
+  padding: 16px 14px;
+
+  .image-container {
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: auto 12px auto 0px;
+    flex-shrink: 0;
+    background-color: $gray-dark;
+    display: flex;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .default-img {
+    width: 28px;
+    height: unset;
+    margin: auto;
+  }
+
+  .name-amount-section {
+    flex-grow: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 16px;
+  }
+
+  .price {
+    flex-shrink: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .delta-price {
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+  }
+
+  .fav-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    .fav-coin {
+      margin-left: 4px;
+    }
+  }
+
+  .shares-amount {
+    font-size: 12px;
+    line-height: 20px;    
+    font-weight: 600;
+    color: #777E91;
+  }
+
+  .fav-coin {
+    color: #777E90;
+    font-weight: 600;
+    font-size: 12px;
+  }
+}
+
+.my-favs-panel {
+  background-color: $gray-darker;
+  border-radius: 24px;
+  padding: 40px 4px;
+  .panel-title {
+    font-weight: 600;
+    margin-top: 0px;
+    padding: 0px 14px;
+    display: flex;
+  }
+  .panel-title.my-favs {
+    margin-bottom: 32px;
+  }
+
+  .empty-section {
+    padding: 32px 0px;
+    margin: auto;
+    text-align: center;
+    .empty-label {
+      color: $gray-dark;
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 24px;
+    }
+  }
+  .empty-myfavs-section {
+    .img-container {
+      height: 72px;
+      width: 72px;
+      box-sizing: border-box;
+      background-color: $gray-dark;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+    img {
+      width: 36px;
+    }
+  }
+
+  .empty-watchlist-section {
+    .img-container img {
+      height: 72px;
+      width: 72px;
+    }
+  }
+
+  .find-favs-button {
+    background-color: $blue;
+    color: $almost-white;
+    margin: auto;
+    margin-top: 24px;
+    width: 148px;
+  }
+
+  .find-favs-button:hover {
+    background-color: $link-hover;
+  }
+
+  .rows-container {
+    transition: 0.7s max-height linear;
+    // transition-delay: 0.5s margin-top;
+    overflow: hidden;
+    max-height: 0px;
+  }
+  
+  .rows-container {
+    .my-favs-row:first-child {
+      margin-top: 32px;
+      // transition: 0.5s margin-top linear;
+      // transition-delay: 0.5s;
+      // margin-top: 0px;
+    }
+  }
+
+  // .rows-container.expanded {
+  //   max-height: 0px;
+  // }
+}

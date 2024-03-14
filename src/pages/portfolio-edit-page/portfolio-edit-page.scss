@@ -1,0 +1,204 @@
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/responsive.scss";
+@import "../../assets/styles/scroll.scss";
+
+$vertical-component-spacing: var(--vertical-component-spacing);
+.portfolio-edit-page {
+  @include responsive(--vertical-component-spacing, 64px, 128px, 160px);
+  // .base-page-content {
+  //   display: flex;
+  //   flex-direction: column;
+  //   row-gap: $vertical-component-spacing;
+  //   width: 1100px;
+  //   margin: auto;
+  // }
+  .section-title {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 40px;
+    line-height: 48px;
+    color: $almost-white;
+    margin-top: 0px;
+
+    @media (max-width: 660px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .section > hr {
+    margin: 42px 0px;
+    background-color: $gray-dark;
+    height: 1px;
+    border: none;
+  }
+  // @media (max-width: 1023px) {
+  //   .base-page-content {
+  //     width: 496px;
+  //     margin: auto;
+  //   }
+  // }
+  // @media (min-width: 1024px) {
+  //   .base-page-content {
+  //     display: grid;
+  //     column-gap: 40px;
+  //     //The calc is to avoid width explosion cause by the favs carousel
+  //     // grid-template-columns: calc(100% - 384px - 40px) 1fr;
+  //     grid-template-columns: min(calc(100% - 384px - 40px), 676px) 1fr;
+  //   }
+  //   .my-favs-panel {
+  //     grid-column: 2 / 3;
+  //     grid-row: 1 / 6;
+  //     margin-bottom: auto;
+  //   }
+  
+  //   .section {
+  //     grid-column: 1 / 2;
+  //   }
+  // }
+  // .section {
+  //   max-width: 640px;
+  // }
+
+  .preview-thumbnail {
+    margin-right: 0;
+    width: 128px;
+    height: 128px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    @media (max-width: 1023px) {
+      gap: 40px;
+    }
+    flex-grow: 1;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    textarea,
+    input {
+      transition: all 0.2s ease;
+      border: 2px solid $gray-dark;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: block;
+      background-color: transparent;
+      width: 100%;
+      box-sizing: border-box;
+      color: $almost-white;
+      line-height: 24px;
+      font-family: poppins;
+
+      font-size: 16px;
+      font-weight: 500;
+      &::placeholder {
+        color: $gray;
+        font-weight: 400 !important;
+      }
+      &:hover {
+        border-color: $gray;
+      }
+      &:focus {
+        border-color: $blue;
+      }
+    }
+
+    textarea::placeholder,
+    input::placeholder {
+      color: $gray;
+      font-weight: 400;
+    }
+
+    input {
+      font-weight: 400;
+    }
+
+    @include customScrollBar("textarea");
+    textarea {
+      height: 96px;
+      font-weight: 400;
+      resize: vertical;
+    }
+
+    textarea.error,
+    input.error {
+      border-color: $pink;
+    }
+  }
+  // label,
+  // .section-title {
+  //   font-weight: 600;
+  //   font-size: 24px;
+  //   line-height: 32px;
+  //   color: $almost-white;
+  //   margin-bottom: 12px;
+  //   display: block;
+
+  //   .aditional-info {
+  //     color: $gray;
+  //     margin-left: 8px;
+  //     font-size: 14px;
+  //     font-weight: 400;
+  //   }
+  // }
+
+  .submit-button {
+    background-color: $blue;
+    color: $almost-white;
+    margin-left: auto;
+  }
+
+  .submit-button:disabled {
+    color: $almost-white;
+    background-color: $gray-dark;
+  }
+
+  .submit-button:not(:disabled):hover {
+    background-color: $link-hover;
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $gray-dark;
+  }
+
+  .error-message {
+    color: $pink;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 8px;
+  }
+
+  .error-box {
+    .transaction-info {
+      display: block;
+      width: 100%;
+    }
+    .errors-title {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+    .errors-text {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  .error.file-input {
+    border: solid $pink;
+  }
+
+  .price-wrapper {
+    background: $gray-darker;
+    border-radius: 16px;
+    padding: 36px 24px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(15, 15, 15, 0.2);
+    overflow-x: hidden;
+  }
+}

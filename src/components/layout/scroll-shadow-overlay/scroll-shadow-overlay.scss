@@ -1,0 +1,36 @@
+.scroll-shadow-overlay {
+  position: relative;
+
+  .top-shadow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(180deg, #1F2128 0%, rgba(31, 33, 40, 0) 100%);
+    height: 30px;
+  }
+  .bottom-shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(0deg, #1F2128 0%, rgba(31, 33, 40, 0) 100%);
+    height: 30px;
+  }
+  .left-shadow {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #1F2128 0%, rgba(31, 33, 40, 0) 100%);
+    width: 30px;
+  }
+  .right-shadow {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: linear-gradient(270deg, #1F2128 0%, rgba(31, 33, 40, 0) 100%);
+    width: 30px;
+  }
+}

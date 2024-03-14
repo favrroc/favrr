@@ -1,0 +1,98 @@
+@import "../../assets/styles/color.scss";
+
+.tooltip {
+    position: relative;
+
+    .tooltip-box {
+        padding: 8px 12px;
+        width: 180px !important;
+        z-index: 9999;
+        position: absolute;
+        background-color: $gray-darker;
+        border-radius: 8px;
+        box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.12);
+        text-align: left;
+
+        font-size: 12px !important;
+        color: #fcfcfd !important;
+        line-height: 20px !important;
+        .tooltip-title {
+            font-weight: 600 !important;
+        }
+    }
+
+    --chevron-gap: 10px;
+
+    .tooltip-box::before {
+        content: '';
+        position: absolute;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent;
+    }
+}
+
+.tooltip.top {
+    .tooltip-box {
+        top: calc(-1 * var(--chevron-gap));
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+
+    .tooltip-box::before {
+        border-top-color: $gray-darker;
+        bottom: -18px;
+        left: calc(50% - 10px);
+    }
+}
+
+.tooltip.bottom {
+    .tooltip-box {
+        bottom: calc(-1 * var(--chevron-gap));
+        left: 50%;
+        transform: translate(-50%, 100%);
+    }
+
+    .tooltip-box::before {
+        border-bottom-color: $gray-darker;
+        top: -18px;
+        left: calc(50% - 10px);
+    }
+}
+
+.hide-chevron.tooltip {
+    --chevron-gap: 0px;
+
+    .tooltip-box::before {
+        display: none
+    }
+}
+
+.tooltip--title,
+.tooltip--body {
+    color: $almost-white;
+    font-size: 12px !important;
+    line-height: 20px;
+}
+
+.tooltip--title {
+    font-weight: 600;
+
+}
+
+.tooltip--body {
+    font-weight: normal;
+    color: #E6E8EC;
+
+    .learn-more {
+        color: $blue;
+        font-weight: bold;
+    }
+}
+
+.tooltip-box {
+    .learn-more {
+        color: $blue;
+        font-weight: bold;
+    }
+}

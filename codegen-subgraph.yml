@@ -1,0 +1,12 @@
+overwrite: true
+schema: 
+  - https://api.studio.thegraph.com/query/32922/oceana-production-mumbai/v0.1.0
+generates:
+  generated-subgraph/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+  generated-subgraph/graphql.schema.json:
+    plugins:
+      - "introspection"

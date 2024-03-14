@@ -1,0 +1,142 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+$chart-height: var(--chart-height);
+
+.fav-price-volume-panel {
+  @include responsive(--chart-height, 200px, 30vw, 329px);
+  
+  .chart-wrapper {    
+    height: $chart-height;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exclusive-picker {
+    margin-top: 42px;
+  }
+  .mode-picker {
+    margin-right: 50px;
+  }
+
+  .still-ipo {
+    font-weight: 600;
+    font-size: 24px;
+    color: $gray;
+    margin: auto;
+    text-align: center;
+
+    img {
+      width: 72px;
+      height: 72px;
+      margin: auto;
+      margin-bottom: 32px;
+    }
+  }
+
+  // canvas {
+  //   height: $chart-height !important;
+  //   width: 100% !important;
+  // }
+
+  .loader {
+    margin: auto;
+  }
+
+  .coin-summary {
+    display: flex;
+    margin-bottom: 48px;
+
+    @media (max-width: 659px) {
+      flex-direction: column;
+      .coin-icon-container {
+        margin-bottom: 24px;
+      }
+    }
+    .coin-icon-container {
+      border-radius: 50%;
+      background-color: $gray-dark;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 24px;
+    }
+    .coin-icon {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    .coin-icon.default-img {
+      border-radius: 0px;
+      object-fit: contain;
+      width: 28px;
+    }
+
+    .fav-coin-name {
+      font-family: DM Sans;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 40px;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .coin-symbol {
+      margin-left: 12px;
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: $gray;
+    }
+
+    .bought-shares, .price-change {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: $gray;
+    }
+
+    .almost-white {
+      color: $almost-white;
+    }
+  }
+
+  .delta {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .delta-timeframe {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray;
+    margin-left: 8px;
+  }
+}
+
+#chartjs-tooltip {
+  background-color: $gray-darker;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 4px 10px;
+  text-align: center;
+  transform: translateY(-70%);
+  box-sizing: border-box;
+  text-align: center;
+  
+  .shares {
+    color: $almost-white;
+    white-space: nowrap;
+  }
+
+  .date {
+    color: $gray;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+}

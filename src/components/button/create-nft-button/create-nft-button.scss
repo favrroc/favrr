@@ -1,0 +1,16 @@
+@import "../../../assets/styles/color.scss";
+
+.create-nft-button {
+    width: 79px;
+    button {
+        background-color: $blue;
+        color: $almost-white;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 700;
+        width: 100%;
+    }
+    button:hover {
+        background-color: $link-hover;
+    }
+}

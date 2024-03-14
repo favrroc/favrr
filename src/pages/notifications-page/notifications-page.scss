@@ -1,0 +1,13 @@
+.notifications-page {
+  max-height: 100vh;
+  display: flex;
+  .base-page-content {
+    padding: 0px;
+    display: flex;
+  }
+
+  .notification-subscription-menu {
+    max-height: 100%;
+    flex-grow: 1;
+  }
+}

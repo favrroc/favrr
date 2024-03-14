@@ -1,0 +1,41 @@
+@import "../../../assets/styles/color.scss";
+
+.user-thumb {
+  position: relative;
+  max-width: 100%;
+  .profile-image {
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    object-fit: cover;
+  }
+  .username {
+    margin: auto;
+    font-weight: bold;
+    font-size: inherit;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .thumb-button {
+    color: $almost-white;
+    padding: 2px 12px 2px 2px;
+    border: 2px solid $gray-dark;
+    border-radius: 999px;
+    display: flex;
+    font-size: 14px;
+    font-family: DM Sans;
+    max-width: 100%;
+    @media screen and (max-width: 576px) {
+      margin: auto;
+    }
+  }
+  .thumb-button:hover {
+    border-color: $almost-white;
+  }
+}

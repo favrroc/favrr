@@ -1,0 +1,26 @@
+@import "../../../assets/styles/color.scss";
+
+.order-status-label {
+  font-size: 14px;
+  color: $pink;
+}
+
+.order-status-label.pending {
+  color: $blue;
+}
+
+.order-status-label.filled,
+.order-status-label.completed,
+.order-status-label.accepted {
+  color: $green;
+}
+
+.order-status-label.withdrawn {
+  color: $lilac;
+}
+
+.order-status-label.failed,
+.order-status-label.rejected,
+.order-status-label.outbid {
+  color: $pink;
+}

@@ -1,0 +1,45 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.market-cap-row {
+  display: grid;
+  display: flex;
+  column-gap: 10px;
+  row-gap: 32px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .field {
+    // flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .field-name {
+    color: $gray;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+  }
+
+  .tooltip {
+    margin: auto;
+    margin-left: 6px;
+    height: 24px;
+  }
+
+  .tooltip-box {
+    font-size: 12px;
+    color: $almost-white;
+    line-height: 20px;
+  }
+
+  .tooltip-title {
+    font-weight: 600;
+  }
+
+    
+  .tooltip-text {
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.popup-fullpage-responsive {
+  display: flex;
+  background-color: $gray-darker;
+  box-shadow: 0px 16px 50px 2px #1f2128;
+  border-radius: 24px;
+  box-sizing: border-box;
+  
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, calc(100% + 10px));
+
+  max-height: calc(100vh - 82px);
+
+  width: 396px;
+}
+
+.popup-fullpage-responsive .caret-up {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, -100%);
+  border: 10px solid transparent;
+  border-bottom-color: $gray-darker;
+}

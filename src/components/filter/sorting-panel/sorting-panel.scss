@@ -1,0 +1,54 @@
+@import "../../../assets/styles/color.scss";
+
+.sorting-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    position: relative;
+    border-radius: 12px;
+    background-color: $gray-darker;
+    min-width: 152px;
+    .sorting-row {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 17px 0px 12px 0px;
+        color: $almost-white;
+        text-align: left;
+        font-family: DM Sans;
+    }
+    button.sorting-row {
+        border-bottom: solid 1px $gray-darkest;
+    }
+    .sorting-row:hover, .sorting-row.selected {
+        color: $blue;
+        @media (pointer: fine) {
+            .ipo-label {
+                color: $blue !important;
+            }
+        }
+    }
+
+    .selected-indicator {
+        position: absolute;
+        left: 0px;
+        width: 2px;
+        background-color: $blue;
+        height: 50px;
+        transition: 0.4s top ease-out;
+    }
+
+    .ipo-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    // .ipo-label {
+    //     transition: all 0.4s ease-out;
+    // }
+    .ipo-label.true {
+        color: $almost-white;
+    }
+    .ipo-label.false {
+        color : $gray;
+    }
+}

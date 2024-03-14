@@ -1,0 +1,35 @@
+@import "../../../assets/styles/color.scss";
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  box-sizing: content-box;
+
+  border: 2px solid $gray-dark;
+  border-radius: 999px;
+
+  height: 40px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+  margin-right: auto;
+  margin-top: 0px;
+
+  color: $almost-white;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (max-width: 660px) {
+    margin-top: 16px;
+  }
+}
+
+.back-button:hover {
+  border-color: $almost-white;
+  filter: brightness(2);
+}

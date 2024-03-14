@@ -1,0 +1,53 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.filters-button {
+    padding: 12px 22px;
+    border-radius: 900px;
+    border: 2px solid #777E91;
+    position: relative;
+    min-width: 64px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile-only {
+        width: 64px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .filter-icon {
+        margin: auto;
+        margin-right: 12px;
+        height: 14px;
+    }
+    
+    img {
+        margin: auto 0px;
+        margin-right: 12px;
+        vertical-align: middle;
+    }
+    
+    .filters-label {
+        font-family: DM Sans;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        color: #FCFCFD;
+        line-height: 16px;
+        vertical-align: middle;
+    }
+
+    .sorting-panel {
+        position: absolute;
+        right: 0px;
+        bottom: -5px;
+        transform: translateY(100%);
+        box-shadow: 0px 16px 64px -48px rgba(31, 47, 70, 0.5);
+    }
+
+}
+
+.filters-button:hover {
+    border-color: $almost-white;
+}

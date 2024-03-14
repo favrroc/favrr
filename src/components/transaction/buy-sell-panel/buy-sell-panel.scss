@@ -1,0 +1,99 @@
+@import "../../../assets/styles/color.scss";
+
+.buy-sell-panel {
+  background-color: $gray-darker;
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  position: relative;
+
+  @media (max-width: 576px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .pre-trade-label {
+    color: $gray;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+  }
+
+  .info-icon {
+    vertical-align: middle;
+    margin-left: 6px;
+    transform: translateY(-2px);
+  }
+
+  .almost-white {
+    color: $almost-white;
+  }
+
+  .ethereum-price {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 40px;
+    color: $almost-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .progress-bar-container {
+    position: absolute;
+    bottom: -32px;
+    left: 48px;
+    right: 48px;
+    transform: translateY(100%);
+  }
+
+  .pretrade-tooltip-title,
+  .pretrade-tooltip-subtitle {
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $almost-white;
+  }
+
+  .pretrade-tooltip-title {
+    font-weight: 600;
+  }
+
+  .countdown {
+    border: none;
+    background-color: transparent;
+    margin-top: 24px;
+  }
+
+  .share-title {
+    color: $almost-white;
+  }
+
+  .tooltip-box {
+    .learn-more {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+}
+
+.buy-sell-panel.row {
+  padding: 15px 32px;
+
+  .ethereum-price {
+    margin-right: 8px;
+  }
+
+  .ethereum-price,
+  .usd-price {
+    display: inline-block;
+    font-size: 12px;
+  }
+
+  .action-button {
+    margin-top: 8px;
+  }
+}

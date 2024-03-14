@@ -1,0 +1,84 @@
+@import "../../../assets/styles/color.scss";
+
+.order-book {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 500;
+  margin: auto;
+
+  .order-row.buy {
+    color: $green;
+  }
+  
+  .order-row.sell {
+    color: $pink;
+  }
+
+  .order-row, .last-pps, .order-book--header {
+    display: flex;
+    justify-content: space-between;
+    padding: 21px;
+  }
+
+  @media (max-width: 660px) {
+    .order-book--header {
+      >span {
+        margin: auto 0px;
+        max-width: 80px;
+      }
+    }
+  }
+
+
+  .order-row {
+    background-color: $gray-darker;
+    border-radius: 12px;
+  }
+
+  .row-item {
+    min-width: 0px;
+    width: 0px;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;    
+    @media(max-width: 660px) {
+      flex-direction: column;
+    }
+  }
+
+
+  .usd-price {
+    color: $gray;
+  }
+  
+  .row-item:last-child {
+    justify-content: flex-end;
+    text-align:  right;
+  }
+
+
+  .load-more-button {
+    margin: auto
+  }
+
+  .empty-order-container {
+    padding: 35px 0px;
+    margin: auto;
+    text-align: center;
+
+    color: $gray;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .empty-order-icon {
+    width: 51px;
+    margin-bottom: 32px;
+  }
+}
+
+.tooltip-box {
+  text-transform: initial;
+}

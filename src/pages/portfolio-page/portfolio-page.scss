@@ -1,0 +1,66 @@
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/responsive.scss";
+
+$vertical-component-spacing: var(--vertical-component-spacing);
+.portfolio-page {
+  @include responsive(--vertical-component-spacing, 64px, 128px, 160px);
+  .base-page-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: $vertical-component-spacing;
+    width: 1100px;
+    margin: auto;
+  }
+  .section-title {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 40px;
+    line-height: 48px;
+    color: $almost-white;
+    margin-top: 0px;
+
+    @media (max-width: 660px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .section > hr {
+    margin: 42px 0px;
+    background-color: $gray-dark;
+    height: 1px;
+    border: none;
+  }
+  @media (max-width: 1023px) {
+    .base-page-content {
+      width: 496px;
+      margin: auto;
+    }
+  }
+  @media (min-width: 1024px) {
+    .base-page-content {
+      display: grid;
+      column-gap: 40px;
+      //The calc is to avoid width explosion cause by the favs carousel
+      // grid-template-columns: calc(100% - 384px - 40px) 1fr;
+      grid-template-columns: min(calc(100% - 384px - 40px), 676px) 1fr;
+    }
+    .my-favs-panel {
+      grid-column: 2 / 3;
+      grid-row: 1 / 6;
+      margin-bottom: auto;
+    }
+  
+    .section {
+      grid-column: 1 / 2;
+    }
+  }
+  // .section {
+  //   max-width: 640px;
+  // }
+
+  .my-orders-panel {
+    width: 100%;
+  }
+}

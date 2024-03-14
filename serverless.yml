@@ -1,0 +1,56 @@
+service: market-favrr-frontend
+
+useDotenv: true
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-2
+  stage: ${env:STAGE}
+
+
+plugins:
+  - serverless-s3-sync
+
+
+custom:
+  s3Sync:
+    - bucketName: ${self:provider.stage}-market-favrr-frontend-assets
+      localDir: build
+      acl: public-read
+
+      params:
+        - index.html:
+            CacheControl: 'no-cache'
+            ContentType: 'text/html; charset=UTF-8'
+        - "**/*.js":
+            CacheControl: 'public, max-age=31536000'
+            ContentType: 'application/javascript; charset=UTF-8'
+        - "**/*.svg":
+            CacheControl: 'public, max-age=31536000'
+            ContentType: 'image/svg+xml'
+        - "**/*.jpg":
+            CacheControl: 'public, max-age=31536000'
+            ContentType: 'image/jpeg'
+        - "**/*.png":
+            CacheControl: 'public, max-age=31536000'
+            ContentType: 'image/png'
+        - "**/*.css":
+            CacheControl: 'public, max-age=31536000'
+            ContentType: 'text/css'
+        - "**/*.ico":
+            CacheControl: 'public, max-age=31536000'
+            ContentType: 'text/css'
+
+package:
+  exclude:
+    - node_modules/**
+    - build/static/**
+
+iamRoleStatements:
+  - Effect: 'Allow'
+    Action:
+      - 'lambda:InvokeFunction'
+    Resource: "*"

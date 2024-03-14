@@ -1,0 +1,31 @@
+@import "../../../../assets/styles/color.scss";
+
+.modal-title {
+
+  .title {
+    font-family: DM Sans;
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;      
+    color: white;
+    margin: auto 0px;
+  }
+
+  .close-button {
+    margin: auto 0px;
+    margin-left: auto;
+    padding: 8px;
+    box-sizing: content-box;
+    border: 2px solid $gray-dark; 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    // width: 40px;
+    // height: 40px;
+}
+
+.close-button:hover {
+    border-color: $almost-white;
+    filter: brightness(2);
+}
+}

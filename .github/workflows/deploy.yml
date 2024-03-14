@@ -1,0 +1,60 @@
+# name: Deploy master branch
+
+# on:
+#   push:
+#     branches:
+#       - develop
+#       - master
+
+# jobs:
+#   deploy:
+#     name: deploy
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [16.14.2]
+#     steps:
+#       - uses: actions/checkout@v2
+
+#       - uses: aws-actions/setup-sam@v1
+#       - uses: aws-actions/configure-aws-credentials@v1
+#         with:
+#           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+#           aws-region: us-east-2
+
+
+#       - name: Set environment for branch
+#         run: |
+#           set -a
+#           if [[ $GITHUB_REF == 'refs/heads/develop' ]]; then
+#               source .env.dev
+#           else
+#               source .env.prod-oceana
+#           fi
+
+#           npm install
+#           npm run generate-graphql-types
+#           npm run generate-subgraph-types
+#           rm -rf build && npm run build
+#           npx serverless deploy
+
+#       # - name: Install dependencies
+#       #   run: npm install
+
+#       # - name: Generate graphql types
+#       #   run: npm run generate-graphql-types
+
+#       # - name: Generate subgraph types
+#       #   run: npm run generate-graphql-types
+
+#       # - name: Build
+#       #   run: npm run build
+          
+#       # - name: serverless deploy
+#       #   uses: serverless/github-action@master
+#       #   with:
+#       #     args: deploy
+#       #   env:
+#       #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+#       #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

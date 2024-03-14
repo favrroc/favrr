@@ -1,0 +1,17 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.about-text {
+  @include responsive(font-size, null, 16px, 24px);
+  @include responsive(line-height, null, 24px, 32px);
+  color: $gray;
+
+  .expand-shrink-button {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: bold;
+    color: #FFFFFF;
+    vertical-align: bottom;
+    padding: 0px;
+  }
+}

@@ -1,0 +1,23 @@
+
+@import "../../../assets/styles/responsive.scss";
+@import "../../../assets/styles/color.scss";
+
+@include responsive-hover('.bordered-button:hover') {
+    border-color: $almost-white;
+    img {
+        // filter: invert(90%) sepia(96%) saturate(4%) hue-rotate(180deg) brightness(100%) contrast(99%);
+        filter: brightness(2);
+    }
+}
+
+.bordered-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border: 2px solid $gray-dark;
+    border-radius: 40px;
+
+    img {
+        margin: auto;
+    }
+}

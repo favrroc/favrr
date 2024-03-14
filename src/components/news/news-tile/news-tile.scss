@@ -1,0 +1,91 @@
+@import "../../../assets/styles/responsive.scss";
+@import "../../../assets/styles/color.scss";
+
+.news-tile {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+  }
+
+  .thumbnail {
+    width: 160px;
+    height: 148px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .thumbnail.no-image {
+    padding: 44px 0px;
+    box-sizing: border-box;
+    background-color: $gray-dark;
+    object-fit: contain;
+  }
+
+  .out-link-arrow {
+    margin-left: 12px;
+    transform: rotate(0deg) translateY(-2px);
+    visibility: hidden;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .source {
+    color: $gray-lighter;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 12px;
+  }
+
+  .date {
+    font-size: 14px;
+    color: #808191;
+  }
+
+  .image-link {
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+}
+
+.news-tile.column {
+  flex-direction: column;
+
+  .image-link {
+    margin-bottom: 16px;
+  }
+  .thumbnail {
+    width: 100%;
+    height: 212px;
+  }
+}
+
+.news-tile.row {
+  flex-direction: row;
+
+  .image-link {
+    margin: auto 0px;
+    margin-right: 24px;
+    width: fit-content;
+  }
+  .news-content {
+    margin: auto 0px;
+    padding: 10px 0px;
+  }
+}
+
+.title:hover, .news-tile.hover {
+
+  .title {
+    color: $link-hover;
+  }
+  .out-link-arrow {
+    visibility: visible;
+  }
+}

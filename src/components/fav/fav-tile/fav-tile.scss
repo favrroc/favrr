@@ -1,0 +1,88 @@
+@import "../../../assets/styles/color.scss";
+.fav-tile:hover {
+  @media screen and (min-width: 820px) {
+    transform: translateY(-10px);
+  }
+  // box-shadow: 0px 64px 64px -48px rgba(0, 0, 0, 0.24);
+}
+.fav-tile {
+  transition: transform ease-out 0.2s;
+  position: relative;
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 303px;
+    // max-width: 311px;
+    // min-width: 256px;
+
+    img.default-img {
+      padding: 30%;
+      box-sizing: border-box;
+      object-fit: contain;
+      background-color: $gray-dark;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+
+  .like-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  .tile-name {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-align: left;
+  }
+
+  .tile-price {
+    font-size: 12px;
+    color: $green;
+    font-weight: bold;
+    border: 2px solid $green;
+    border-radius: 4px;
+    padding: 3px 5px;
+
+    margin: auto 0px;
+    white-space: nowrap;
+  }
+
+  .name-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  hr {
+    border: 1px $gray-dark solid !important;
+    border-bottom-style: none !important;
+    margin: 12px 0px !important;
+  }
+
+  .countdown {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  .delta-eth {
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 4px;
+  }
+  .delta-percent {
+    color: $gray;
+    font-size: 12px;
+  }
+}

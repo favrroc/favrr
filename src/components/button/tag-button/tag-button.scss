@@ -1,0 +1,18 @@
+@import "../../../assets/styles/color.scss";
+
+.tag-button {
+    border: 1px solid $gray-dark;
+    border-radius: 999px;
+    padding: 10px 14px;
+
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: $almost-white;
+}
+
+.tag-button:hover {
+    border-color: $almost-white;
+    color: unset !important;
+}

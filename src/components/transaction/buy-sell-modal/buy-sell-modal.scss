@@ -1,0 +1,197 @@
+@import "../../../assets/styles/base.scss";
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.buy-sell-modal {
+    font-weight: 600;
+    font-size: 16px;
+    color: #777E91;
+    
+    .buy-title {
+        font-family: DM Sans;
+        display: flex;
+        font-size: 32px;
+        font-weight: bold;      
+        color: white;
+    }
+    
+    input {
+        font-family: DM Sans;
+        color: $almost-white;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-size: 64px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    // .number-tokens-input::placeholder {
+    //     color: $almost-white;
+    // }
+    // .number-tokens-input:focus::placeholder {
+    //     color: transparent;
+    // }
+    .number-tokens-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .numbers-tokens-input {
+        -moz-appearance: textfield;
+    }
+
+    .blue {
+        color: $blue;
+    }
+
+    .almost-white {
+        color: $almost-white;
+    }
+
+    .remaining-shares-count {
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .limit-price-change {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    hr {
+        margin: 16px 0px;
+        border: none;
+        border-top: 1px solid $gray-dark;
+    }
+
+    .price-value {
+        font-weight: 500;
+        font-size: 16px;
+        color: $almost-white;
+    }
+
+    .summary-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 36px;
+    }
+
+    .price-row {
+        display: flex;
+        justify-content: space-between;
+        .price-field {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #808191;
+            display: flex;
+            align-items: center;
+        }
+        &.total-price-row {
+            border-top: solid 1px #353945;
+            padding-top: 16px;
+            .price-field {
+                color: #FCFCFD;
+            }
+        }
+    }
+
+    .total-price-row {
+        margin-bottom: 46px;
+    }
+
+    .total-value {
+        position: relative;
+    }
+    .usd-value {
+        font-size: 12px;
+        position: absolute;
+        right: 0px;
+        white-space: nowrap;
+        bottom: -25px;
+        color: $gray;
+    }
+
+    .action-button {
+        color: white;
+        flex-grow: 1;
+        width: unset;
+    }
+
+    .cancel-button {
+        border: 2px solid $gray-dark;
+        margin-right: 12px;
+    }
+    .cancel-button:hover {
+        border-color: $almost-white;
+    }
+
+    .buy-button {
+        background-color: $blue;
+
+        &:disabled {
+            color: $almost-white;
+            background-color: $gray-dark;
+        }
+        &:not(:disabled):hover {
+            background-color: #315EC9;
+        }
+    }
+
+    .error-box {
+        padding: 24px;
+        background: rgba(239, 70, 111, 0.08);
+        color: $pink;
+        border-radius: 8px;
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .error-icon {
+        object-fit: contain;
+        margin-right: 16px;
+    }
+
+    .error-messages{
+        text-align: left;
+        font-weight: 400;
+    }
+
+    .error-title {
+        font-weight: bold;
+    }
+
+    .input-error-label {
+        color: $pink;
+        font-weight: normal;
+    }
+
+    .last-transaction {
+        text-align: left;
+        font-size: 12px;
+        font-weight: normal;
+        color: $green;
+        margin-top: 8px;
+    }
+
+
+    .explanation-title,.explanation-text {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+    }
+    .explanation-title {
+        color: $almost-white;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .explanation-text {
+        color: #E6E8EC;
+        margin-bottom: 32px;
+        font-weight: 400;
+    }
+}

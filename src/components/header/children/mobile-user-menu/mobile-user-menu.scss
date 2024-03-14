@@ -1,0 +1,31 @@
+@import "../../../../assets/styles/color.scss";
+@import "../../../../assets/styles/responsive.scss";
+
+.mobile-user-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  height: unset !important;
+  width: 267px !important;
+  background-color: $gray-darkest;
+  box-shadow: 0px 16px 50px 2px #0f1118aa;
+
+  .menu-item {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: $almost-white;
+    padding: 16px;
+    text-align: left;
+  }
+
+  .active-row,
+  .menu-item:hover {
+    color: $blue;
+    border-radius: 16px;
+  }
+  .menu-item:hover {
+    background-color: $gray-darker;
+  }
+}

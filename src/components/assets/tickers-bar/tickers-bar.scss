@@ -1,0 +1,50 @@
+@import "../../../assets/styles/color.scss";
+
+.tickers-bar {
+  display: flex;
+  background-color: $gray-darker;
+  padding: 9px 24px;
+  box-sizing: border-box;
+  box-shadow: 0px -8px 16px -8px rgb(15 15 15 / 20%);
+
+  .vertical-separator {
+    margin: 0px 24px;
+    background-color: $gray-dark;
+    width: 1px;
+    height: 100%;
+    flex-shrink: 0;
+  }
+
+  .child {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ticker-item {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .fav-thumb {
+    flex-shrink: 0;
+  }
+
+  .coin-label {
+    color: $gray;
+    font-weight: 600;
+    margin: auto;
+  }
+
+  .price-label,
+  .delta {
+    white-space: nowrap;
+    color: $almost-white;
+    font-weight: 600;
+    margin: auto;
+  }
+
+  .ticker-item {
+    font-size: 14px;
+  }
+}

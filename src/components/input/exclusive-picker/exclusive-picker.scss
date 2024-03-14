@@ -1,0 +1,29 @@
+@import "../../../assets/styles/color.scss";
+
+.exclusive-picker {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  .option-button {
+    font-weight: 500;
+    font-size: 14px;
+    color: #777e90;
+    border-radius: 99px;
+    padding: 6px 12px;
+    font-family: Poppins;
+  }
+
+  .option-button.active:not(:disabled),
+  .option-button:hover:not(:disabled) {
+    background-color: $blue;
+    color: $almost-white;
+  }
+
+  .option-button:disabled {
+    color: $gray-dark;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/responsive.scss";
+@import "../../assets/styles/sizes.scss";
+
+$mobile-threshold : 850px;
+.header {
+    height: 41px;
+    font-family: DM Sans;
+    background-color: $gray-darkest;
+    padding: 20px 4px;
+    @media screen and (min-width: 375px) {
+        padding: 20px 32px;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 20px 56px;
+    }
+    @media screen and (min-width: 1025px) {
+        padding: 20px 80px;
+    }
+    @media screen and (min-width: 1440px) {
+        padding: 20px 160px;
+    }
+    
+    @include max-width-auto-padding();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 1px $gray-dark solid;
+    z-index: 4;
+    position: relative;
+
+    .explore-section {
+        display: flex;
+        gap: 40px;
+    }
+
+    .header-section {
+        display: flex;
+        margin: auto 0px;
+    }
+
+    .right-section {
+        min-width: 250px;
+        justify-content: end;
+        & > button:last-child {
+            margin-right: 0;
+        }
+        @media screen and (max-width: 1024px) {
+            min-width: 195px;
+        }
+        @media screen and (max-width: 650px) {
+            min-width: inherit;
+        }
+    }
+
+    .right-section>* {
+        @include responsive(margin-right, 12px, 16px, 24px);
+        button:last-child {
+            margin-right: 0;
+        }
+    }
+
+    //Last components in right flex component
+    .user-button, .burger-button {
+        margin-right: 0px;
+    }
+
+    .connect-wallet-button,.user-thumb {
+        margin-right: 0px;
+    }
+    
+    .burger-button {
+        margin-right: 0px;
+    }
+
+    .logo {
+        margin: auto 0px;
+        @media (max-width: 340px) {
+            img {
+                height: 22px;
+            }
+        }
+    }
+
+    .hide-section-for-blog {
+        display: none;
+    }
+
+    @media (max-width: 576px){
+        .hide-section-for-blog {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1024px){
+        .user-thumb .thumb-button {
+            max-width: 118px;
+        }
+    }
+}

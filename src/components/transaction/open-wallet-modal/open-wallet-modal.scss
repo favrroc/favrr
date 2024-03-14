@@ -1,0 +1,27 @@
+@import "../../../assets/styles/color.scss";
+
+.open-wallet-modal {
+  .loader {
+    margin-bottom: 24px;
+  }
+  .title {
+      font-size: 40px;
+      line-height: 48px;
+      justify-content: center;
+      color: $almost-white;
+      font-weight: bold;
+      font-family: 'DM Sans';
+      margin: 0px;
+      margin-bottom: 6px;
+  }
+ 
+  .subtitle {
+    color: $gray;
+    margin: 32px auto;
+    font-size: 14px;
+  }
+  .done-btn {
+      margin-top: 32px;
+      width: 100%;
+  }
+}

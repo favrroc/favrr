@@ -1,0 +1,119 @@
+@import "../../../../assets/styles/color.scss";
+.ipo-tile:hover {
+  @media screen and (min-width: 820px) {
+    transform: translateY(-10px);
+  }
+  // box-shadow: 0px 64px 64px -48px rgba(0, 0, 0, 0.24);
+}
+.ipo-tile {
+  transition: transform ease-out 0.2s;
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 303px;
+    max-width: 100%;
+    // min-width: 256px;
+
+    @media screen and (max-width: 1023px) {
+      height: 432px;
+    }
+
+    img.default-img {
+      padding: 30%;
+      box-sizing: border-box;
+      object-fit: contain;
+      background-color: $gray-dark;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+
+  .like-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  .tile-name {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-align: left;
+    line-height: 24px;
+    padding-right: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .tile-price {
+    font-size: 12px;
+    color: $green;
+    font-weight: bold;
+    border: 2px solid $green;
+    border-radius: 4px;
+    padding: 8px;
+
+    margin: auto 0px;
+    white-space: nowrap;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    .inner-label {
+      color: $gray;
+    }
+  }
+
+  .name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  hr {
+    border: 1px $gray-dark solid !important;
+    border-bottom-style: none !important;
+    margin: 12px 0px !important;
+  }
+
+  .countdown {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    border: none;
+    background-color: $darker-blue;
+    border-radius: 24px;
+    padding: 2px 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: $almost-white;
+  }
+
+  .delta-eth {
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 4px;
+  }
+  .delta-percent {
+    color: $gray;
+    font-size: 12px;
+  }
+}

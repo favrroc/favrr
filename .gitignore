@@ -1,0 +1,9 @@
+node_modules
+build
+generated-graphql
+generated-subgraph
+/.serverless
+.DS_STORE
+custom-types.ts
+.vscode
+.env

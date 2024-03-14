@@ -1,0 +1,24 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.notice-tile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 19px 19px 12px;
+  background: $accent-blue;
+  border-radius: 12px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: $gray-lighter;
+  text-align: left;
+  .notice-icon {
+    height: 32px;
+    width: 32px;
+    margin: 0 19px 0 7px;
+  }
+}

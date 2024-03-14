@@ -1,0 +1,50 @@
+@import "../../assets/styles/responsive.scss";
+@import "../../assets/styles/sizes.scss";
+@import "../../assets/styles/color.scss";
+
+@mixin page-padding {
+  @include max-width-auto-padding(1696px);
+  @media (min-width: 621px) {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  padding-left: 0px;
+  padding-right: 0px;
+
+  max-width: $max-content-width;
+}
+
+.public-profile-page {
+    .explore-cards-container {
+        margin: auto;
+        max-width: 1696px;
+        text-align: center; //Align loader
+        overflow: hidden !important;
+        padding: 32px 0px;
+        display: grid;
+
+        @include page-padding();
+        @media screen and (min-width: 1025px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media screen and (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        --grid-gap: 16px;
+        @media (max-width: 700px) {
+            --grid-gap: 12px;
+        }
+        column-gap: var(--grid-gap);
+        row-gap: 32px;
+        @include mobile-only {
+        row-gap: 44px;
+        }
+    }
+}

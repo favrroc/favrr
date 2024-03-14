@@ -1,0 +1,157 @@
+@import "../../../assets/styles/color.scss";
+
+.my-orders-panel {
+  table {
+    border-spacing: 0px 12px;
+    width: 100%;
+  }
+
+  .order-row:hover {
+    td {
+      background-color: $gray-darker;
+    }
+
+    td:first-child {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    td:last-child {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  .order-row {
+    padding: 16px 12px;
+    cursor: pointer;
+    display: table-row;
+  }
+
+  .coin-avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto 0px;
+  }
+
+  td {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $almost-white;
+
+    @media screen and (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+
+  td,
+  th {
+    // padding-top: 16px;
+    // padding-bottom: 16px;
+    padding: 16px 0px;
+  }
+
+  td:first-child,
+  th:first-child {
+    padding-left: 12px;
+  }
+
+  td:last-child,
+  th:last-child {
+    padding-right: 12px;
+  }
+
+  .secondary-info {
+    color: #b1b5c3;
+  }
+
+  th {
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: $gray;
+    border-bottom: 1px $gray-dark solid;
+  }
+
+  .order-status,
+  .order-type {
+    text-transform: capitalize;
+  }
+
+  // .order-type.sell {
+  //     color: $pink;
+  // }
+
+  // .order-type.buy {
+  //     color: $green;
+  // }
+
+  .no-orders {
+    color: $gray;
+    text-align: center;
+  }
+
+  .exclusive-picker {
+    margin-bottom: 30px;
+
+    .option-button.active:not(:disabled),
+    .option-button:hover:not(:disabled) {
+      background-color: $gray-dark;
+    }
+
+    @media (max-width: 350px) {
+      gap: 0px;
+
+      .option-button {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .option-button {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #808191;
+  }
+
+  .image-name-container {
+    display: flex;
+  }
+
+  .image-name-container.row {
+    gap: 32px;
+  }
+
+  .image-name-container.column {
+    gap: 0px;
+    flex-direction: column;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .empty-order {
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 64px 0px;
+
+    img {
+      margin-bottom: 32px;
+      width: 52px;
+    }
+  }
+
+  .time-since {
+    color: $gray;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

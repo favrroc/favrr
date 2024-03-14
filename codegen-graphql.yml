@@ -1,0 +1,12 @@
+overwrite: true
+schema: 
+  - https://oceana-market-prod-backend.bixlist.com/graphql
+generates:
+  generated-graphql/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+  generated-graphql/graphql.schema.json:
+    plugins:
+      - "introspection"

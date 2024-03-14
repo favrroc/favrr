@@ -1,0 +1,48 @@
+@import "../../../assets/styles/color.scss";
+
+.progress-bar {
+  position: relative;
+  height: 4px;
+  border-radius: 999px;
+  background-color: $gray-dark;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  width: var(--progress-percentage);
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+}
+
+.progress-bar.green::before {
+  background-color: $green;
+}
+
+.progress-bar.pink::before {
+  background-color: $pink;
+}
+
+.remaining-shares {
+  color: $almost-white;
+  font-weight: 600;
+}
+
+.many-available,.few-available {
+  text-align: center;
+  font-size: 12px;
+}
+
+.many-available {
+  color: #777E91;
+}
+
+.few-available {
+  font-weight: 600;
+  color: $pink;
+}

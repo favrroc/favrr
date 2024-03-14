@@ -1,0 +1,14 @@
+.social-media-bar {
+  display: inline-block;
+  a:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .twitter-link {
+    transform: translateY(-2px);
+  }
+
+  a:hover img {
+    filter: brightness(2);
+  }
+}

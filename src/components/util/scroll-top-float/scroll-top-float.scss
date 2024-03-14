@@ -1,0 +1,29 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/sizes.scss";
+@import "../../../assets/styles/responsive.scss";
+
+.scroll-top-float {
+
+  position: fixed;
+
+  right: max(#{$screen-padding}, calc(50vw - 560px));
+  
+
+  bottom: 30vh;
+  width: 60px;
+  height: 60px;
+  
+  border-radius: 6px;
+  background-color: $gray-darker;
+
+  img {
+    transform: rotate(90deg);
+    width: 35px;
+  }
+}
+
+@include responsive-hover('.scroll-top-float') {
+  img {
+    filter: brightness(2)
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../assets/styles/responsive.scss";
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/scroll.scss";
+
+.categories-picker {
+  padding-bottom: 5px;
+  max-width: 100%;
+  // overflow: auto;
+
+  @include hideScrollBar(".categories-scroll");
+  .categories-scroll {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior: none;
+  }
+
+  .category-button {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #777e90;
+    padding: 6px 12px;
+    vertical-align: middle;
+  }
+  @include desktop-only {
+    .category-button:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  .category-button:not(.selected):hover {
+    color: $almost-white;
+    border-radius: 900px;
+  }
+
+  .category-button.selected {
+    background-color: $almost-white;
+    color: $gray-darker;
+    border-radius: 900px;
+  }
+}

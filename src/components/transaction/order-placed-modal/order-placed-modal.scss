@@ -1,0 +1,60 @@
+@import "../../../assets/styles/color.scss";
+
+.order-placed-modal {
+    .buy-title {
+        font-size: 40px;
+        justify-content: center;
+        color: $almost-white;
+        font-weight: bold;
+        font-family: "DM Sans";
+        margin: 0px;
+    }
+
+    .purchased-token-number {
+        margin: 30px 0px;
+        color: $almost-white;
+        font-weight: 400;
+        text-align: center;
+    }
+    .transaction-box {
+        padding: 24px;
+        border: 1px solid $gray-dark;
+        border-radius: 12px;
+        text-align: left;
+        display: flex;
+
+        > .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 0px;
+            width: 0px;
+            flex-grow: 1;
+        }
+
+        .transaction-status {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .transaction-status.pending {
+            color: $blue;
+        }
+
+        .transaction-status.completed {
+            color: $green;
+        }
+
+        .transaction-status.failed {
+            color: $pink;
+        }
+    }
+
+    .done-btn {
+        margin-top: 32px;
+        width: 100%;
+    }
+}

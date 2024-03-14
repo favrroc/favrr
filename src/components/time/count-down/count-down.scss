@@ -1,0 +1,21 @@
+@import "../../../assets/styles/color.scss";
+
+.countdown {
+    background-color: $gray-darkest;
+    border: 2px solid $gray-dark;
+    border-radius: 60px;
+    padding: 4px 10px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: inline-flex;
+    gap: 4px;
+    color: $almost-white;
+
+    .timeslot {
+        display: inline-block;
+        text-align: center;
+    }
+}

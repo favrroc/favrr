@@ -1,0 +1,29 @@
+@import "../../../assets/styles/color.scss";
+
+.info-box {
+  background: rgba(108, 93, 211, 0.08);
+  padding: 24px;
+  display: flex;
+  grid-gap: 16px;
+  border-radius: 8px;
+  
+  img {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    object-fit: contain;
+  }
+  
+  .transaction-info {
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.info-box.pink {
+  background: #FFA2C014;
+  /* .transaction-info {
+    color: $pink;
+  } */
+}

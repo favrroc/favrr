@@ -1,0 +1,67 @@
+@import "../../../assets/styles/color.scss";
+
+.notification-tile {
+  display: flex;
+  gap: 24px;
+  cursor: pointer;
+  img {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: auto 0px;
+  }
+
+  .default-img {
+    background-color: $gray-dark;
+    object-fit: contain;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $almost-white;
+  }
+
+  .type {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $gray-lighter;
+  }
+  .time-since {
+    font-size: 12px;
+    line-height: 20px;
+    color: #777e91;
+    vertical-align: text-bottom;
+  }
+
+  .read-symbol {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    background-color: $blue;
+    border-radius: 50px;
+    margin: auto 0px;
+  }
+}
+
+.notification-tile:hover {
+  background-color: #1f2128;
+  border-radius: 16px;
+}

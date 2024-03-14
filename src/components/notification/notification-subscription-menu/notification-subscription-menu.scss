@@ -1,0 +1,77 @@
+@import "../../../assets/styles/color.scss";
+@import "../../../assets/styles/responsive.scss";
+@import "../../../assets/styles/scroll.scss";
+
+.notification-subscription-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .notification-tile {
+        padding: 16px;
+    }
+
+    .loader:not(.initial-loader) {
+        margin: 20px auto !important;
+    }
+
+    @include customScrollBar('.notifications-list');
+    .notifications-list {
+        // overflow-y: hidden !important;
+        overflow-y: auto;
+        max-height: 100%;
+
+        //Display flex for alignin loading
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        // box-sizing: border-box;
+    }
+
+
+    .infinite-scroll-component__outerdiv {
+        min-height: 0px;
+        // overflow-y: auto;
+    }
+
+    .notifications-title {
+        font-weight: 600;
+        font-size: 24px;
+        color: $almost-white;
+        margin: 0px auto 40px auto;
+    }
+}
+.popup-fullpage-responsive:not(.fullpage) {
+    max-height: min(652px, calc(100vh - 82px)) ;
+    .notifications-title {
+        display: none;
+    }
+}
+.notification-subscription-menu.subscription {
+
+}
+.notification-subscription-menu.notifications {
+    padding: 40px 0px;
+    .notifications-list {
+        padding: 0 16px;
+    }
+    .subscription-button-container {
+        text-align: center;
+        box-shadow: 0px -3px 11px -3px $gray-darkest;
+    }
+    .subscription-button {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: bold;
+        color: $almost-white;
+        border: 2px solid $gray-dark;
+        border-radius: 90px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 280px;
+        box-sizing: border-box;
+        margin: 24px auto 0px auto;
+    }
+    .subscription-button:hover {
+        border-color: $almost-white;
+    }
+}
